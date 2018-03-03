@@ -1,0 +1,91 @@
+ <!-- Portfolio Modals -->
+ {% for post in site.posts %}
+    <div class="portfolio-modal modal fade" id="portfolioModal{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>{{ post.title }}</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <p>{{ post.description }}</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="{{ post.homepage }}" target="_blank">{{ post.client }}</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">{{ post.project-date }}</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">{{ post.category }}</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+<!-- About modal -->
+<div class="about-modal modal fade" id="aboutModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="img/fbheader.png" class="img-responsive img-centered" alt="">
+      </div>
+      <div class="modal-body modal-lg">
+        <p>Somos a única agência totalmente digital especializada em posicionamento de marca para pequenas e médias empresas.</p>
+
+        <p>Atendemos empresas que precisam melhorar a maneira como seus consumidores enxergam a sua marca. Agência digital é: completa, eficaz e acessível.</p>
+
+        <p>Trabalhamos desde de criação de logo, até reposicionamento de marcas que precisam ser renovadas. Utilizamos principalmente os meios digitais para aumentar o valor da marca e atendemos clientes em qualquer localidade, através do suporte online. Contamos com equipes remotas especialistas em cada área, podendo atender inclusive desenvolvimento de sites e aplicativos.</p>
+
+        <p>O perfil do nosso cliente é do empreendedor que quer agregar valor ao seu negócio, mostrando uma estrutura de marketing completa para melhorar o relacionamento com o cliente.</p>
+
+        <p>Cada negócio tem seu ponto forte, que pode ser explorado, para aumentar a captação, o consumo médio de cada cliente, fidelização e lucratividade.</p>
+
+        <p>O marketing de relacionamento com o cliente é algo que não é simples de ser construído, porém com a dedicação necessária e a manutenção contínua desse relacionamento, o sucesso do seu negócio é garantido.</p>
+
+        <p>Conte conosco, no mínimo, para sempre!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Services Modals -->
+{% for service in site.categories.services %}
+  <div class="about-modal modal fade" id="serviceModal{{ service.modal-id }}" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="{{service.image}}" class="img-responsive img-centered" alt="">
+        </div>
+        <div class="modal-body modal-lg">
+          <p>{{service.title}}</p>
+          <p>{{service.description}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
