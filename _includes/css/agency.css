@@ -376,7 +376,7 @@ section h2.section-heading {
 }
 
 section h3.section-subheading {
-    margin-bottom: 75px;
+    margin-bottom: 50px;
     text-transform: none;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
@@ -423,6 +423,8 @@ section h3.section-subheading {
 #services .section-header{
 }
 
+
+
 .service-card{
     border: 5px solid #{{ site.data.template.color.primary }};
     border-radius: 15px 50px 30px;
@@ -430,20 +432,54 @@ section h3.section-subheading {
     padding-left: 25px;
     padding-right: 25px;
     margin-bottom: 25px;
-    height: 350px;
+    height: 200px;
 }
 
 .service-icon {
-    max-height: 150px;
+    max-height: 50px;
 }
 
 .service-heading {
-    margin: 50px 0;
+    margin: 20px 0;
     text-transform: none;
     font-family: {{ site.data.template.font.primary }};
-    font-size: 24px;
+    font-size: 12px;
 }
 
+.col-md-4--nostack{
+    width: 50.0%;
+    float: left;
+}
+
+@media(min-width: 920px){
+    .col-md-4--nostack{
+        width: 33.3%;
+    }
+}
+
+@media(min-width:768px) {
+    .service-card{
+        border: 5px solid #{{ site.data.template.color.primary }};
+        border-radius: 15px 50px 30px;
+        padding-top: 50px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 25px;
+        height: 350px;
+    }
+
+    .service-icon {
+        max-height: 150px;
+    }
+
+    .service-heading {
+        margin: 50px 0;
+        text-transform: none;
+        font-family: {{ site.data.template.font.primary }};
+        font-size: 24px;
+    }
+
+}
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
